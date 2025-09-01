@@ -1,23 +1,100 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  background: #f4f4f9;
+/* Chatbot Floating Button */
+.chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: blue;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  z-index: 999;
 }
-header {
-  background: #333;
-  color: #fff;
-  padding: 2rem;
+.chat-toggle:hover { transform: scale(1.1); }
+
+/* Chatbot Window */
+.chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+  transition: background 0.4s ease;
 }
-h1 {
-  margin: 0;
+body.dark-mode .chatbot-container { background: #1f1f1f; }
+
+/* Chat Header */
+.chat-header {
+  background: linear-gradient(45deg, red, gold, blue);
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-section {
-  margin: 2rem;
+.chat-header h4 { margin: 0; font-size: 1rem; }
+.chat-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
 }
-footer {
-  background: #333;
-  color: #fff;
-  padding: 1rem;
+
+/* Chat Body */
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+.bot-msg {
+  background: #e0e0e0;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin: 5px 0;
+  max-width: 80%;
+}
+.user-msg {
+  background: blue;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin: 5px 0;
+  max-width: 80%;
+  align-self: flex-end;
+}
+
+/* Dark Mode Chat Adjustments */
+body.dark-mode .bot-msg { background: #333; color: #fff; }
+body.dark-mode .user-msg { background: #0057ff; }
+
+/* Chat Footer */
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+.chat-footer input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+.chat-footer button {
+  background: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
