@@ -1,135 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S3M.site - Modern Web Experience</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S3M.site</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header / Navbar -->
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-left">Sales: <a href="tel:+917730842873">+91 7730842873</a></div>
+    <div class="top-right">Support: <a href="tel:+917730842873">+91 7730842873</a></div>
+  </div>
+
+  <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">
-      <span class="s">S</span><span class="three">3</span><span class="m">M</span>.site
+    <div class="brand">
+      <a href="index.html" class="logo" aria-label="S3M.site Home">
+        <span class="logo-s">S</span><span class="logo-3">3</span><span class="logo-m">M</span><span class="logo-dot">.</span><span class="logo-site">site</span>
+      </a>
     </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#signin" class="btn">Sign In</a></li>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li class="dropdown">
+          <a href="#services">Hosting Services ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#services">Public Cloud: AWS, Azure, GCP</a></li>
+            <li><a href="#services">Hybrid Cloud Solutions</a></li>
+            <li><a href="#services">Private Cloud (OpenStack)</a></li>
+          </ul>
+        </li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li class="dropdown">
+          <a href="#about">About Us ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#about">About S3M.site</a></li>
+            <li><a href="#about">Careers</a></li>
+            <li><a href="#about">Contact Us</a></li>
+            <li><a href="#about">FAQs</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
-    <!-- Dark Mode Toggle -->
-    <button id="darkModeToggle">🌙</button>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to <span class="s">S</span><span class="three">3</span><span class="m">M</span>.site</h1>
-    <p>Your modern platform for cloud, DevOps & AI solutions.</p>
-
-    <div class="search-box">
-      <input type="text" placeholder="Search services, blogs, tutorials...">
-      <button>🔍</button>
+  <!-- Hero -->
+  <section id="hero" class="hero" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');">
+    <div class="overlay"></div>
+    <div class="hero-inner">
+      <h1>
+        <span class="white-text">Welcome to</span>
+        <span class="logo-s">S</span><span class="logo-3">3</span><span class="logo-m">M</span><span class="logo-dot">.</span><span class="logo-site">site</span>
+      </h1>
+      <p class="tagline">It’s Cloud &amp; AIML world</p>
+      <a href="#services" class="btn btn-primary">Explore Services</a>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>🚀 Cloud Solutions</h3>
-        <p>We help businesses adopt AWS, Azure, and GCP with modern architectures.</p>
-      </div>
-      <div class="card">
-        <h3>⚙️ DevOps</h3>
-        <p>Automated CI/CD pipelines, container orchestration, and monitoring solutions.</p>
-      </div>
-      <div class="card">
-        <h3>🤖 AI & ML</h3>
-        <p>Deploying smart AI models integrated with scalable cloud infrastructure.</p>
-      </div>
+  <!-- Services -->
+  <section id="services" class="section services">
+    <h2>Cloud &amp; Hosting Services</h2>
+    <p class="section-sub">We design, migrate and optimize modern cloud platforms.</p>
+    <div class="cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=900&q=80" alt="Public Cloud" loading="lazy">
+        <div class="card-body">
+          <h3>Public Cloud</h3>
+          <p>AWS, Azure, and Google Cloud solutions for scale, security, and speed.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80" alt="Hybrid Cloud" loading="lazy">
+        <div class="card-body">
+          <h3>Hybrid Cloud</h3>
+          <p>Balanced architectures combining on‑prem with cloud for flexibility.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=900&q=80" alt="Private Cloud" loading="lazy">
+        <div class="card-body">
+          <h3>Private Cloud</h3>
+          <p>Secure, dedicated clouds built on OpenStack and Kubernetes.</p>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- Profile Section -->
-  <section id="profile" class="profile">
-    <h2>Your Profile</h2>
-    <p>Sign in to view personalized content and services.</p>
-    <a href="#signin" class="btn">Sign In</a>
+  <!-- Clients (Logo Grid) -->
+  <section id="clients" class="section clients">
+    <h2>Our Clients &amp; Ecosystem</h2>
+    <p class="section-sub">Trusted technologies we architect and support.</p>
+    <div class="logo-grid">
+      <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS logo"></div>
+      <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure logo"></div>
+      <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Cloud_logo.svg" alt="Google Cloud logo"></div>
+      <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/OpenStack_logo_2016.svg" alt="OpenStack logo"></div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="section blog">
+    <h2>From the Blog</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="DevOps pipelines" loading="lazy">
+        <div class="card-body">
+          <h3>CI/CD Best Practices in 2025</h3>
+          <p>Blueprints for reliable, fast deployments across multi‑cloud environments.</p>
+          <a href="#" class="btn btn-outline">Read More</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80" alt="AI & ML" loading="lazy">
+        <div class="card-body">
+          <h3>Practical ML on the Cloud</h3>
+          <p>Serving models at scale with cost‑efficient inference architectures.</p>
+          <a href="#" class="btn btn-outline">Read More</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Security" loading="lazy">
+        <div class="card-body">
+          <h3>Security by Design</h3>
+          <p>Zero‑trust patterns, IAM hardening, and automated compliance.</p>
+          <a href="#" class="btn btn-outline">Read More</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section about">
+    <h2>About S3M.site</h2>
+    <p class="about-text">
+      We are a cloud and AI/ML engineering studio helping teams modernize applications,
+      automate delivery, and unlock insights from data. From discovery to production,
+      we partner with you end‑to‑end.
+    </p>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>Careers</h3>
+        <p>Join a team that loves building, learning, and shipping.</p>
+      </div>
+      <div class="about-card">
+        <h3>Contact Us</h3>
+        <p>Email us at <a href="mailto:sales@s3m.site">sales@s3m.site</a></p>
+      </div>
+      <div class="about-card">
+        <h3>FAQs</h3>
+        <p>Answers to common questions about our services and process.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>© 2025 S3M.site | Designed with ❤️ by Madhu</p>
+  <footer class="footer">
+    <div>© 2025 S3M.site</div>
+    <div>Mail: <a href="mailto:sales@s3m.site">sales@s3m.site</a></div>
   </footer>
 
   <!-- Floating Chatbot -->
-  <div class="chatbot-container" id="chatbot">
+  <button id="chat-toggle" class="chat-toggle" aria-label="Open chat">💬</button>
+  <div id="chat-widget" class="chat-widget" aria-live="polite" aria-label="Chat widget">
     <div class="chat-header">
-      <h4>S3M Assistant 🤖</h4>
-      <button id="closeChat">✖</button>
+      <span>S3M Assistant</span>
+      <button id="chat-close" class="chat-close" aria-label="Close chat">✕</button>
     </div>
-    <div class="chat-body" id="chatBody">
-      <div class="bot-msg">Hello! 👋 How can I help you today?</div>
+    <div id="chat-body" class="chat-body">
+      <div class="msg bot">Hello 👋 How can I help you today?</div>
+      <div class="msg bot">Ask about services, pricing, or email us at <strong>sales@s3m.site</strong>.</div>
     </div>
-    <div class="chat-footer">
-      <input type="text" id="userInput" placeholder="Type a message...">
-      <button id="sendBtn">➤</button>
+    <div class="chat-input">
+      <input id="chat-input" type="text" placeholder="Type your message..." />
+      <button id="chat-send" class="btn-send" aria-label="Send">➤</button>
     </div>
   </div>
-  <button class="chat-toggle" id="chatToggle">💬</button>
 
-  <!-- Scripts -->
   <script>
-    // Dark Mode Toggle
-    const toggleBtn = document.getElementById('darkModeToggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? "☀️" : "🌙";
+    // Mobile nav toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const nav = document.querySelector('.navbar nav');
+    navToggle && navToggle.addEventListener('change', () => {
+      nav.classList.toggle('open', navToggle.checked);
     });
 
-    // Chatbot Toggle
-    const chatToggle = document.getElementById('chatToggle');
-    const chatbot = document.getElementById('chatbot');
-    const closeChat = document.getElementById('closeChat');
-    chatToggle.addEventListener('click', () => chatbot.style.display = "flex");
-    closeChat.addEventListener('click', () => chatbot.style.display = "none");
+    // Chatbot logic
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatWidget = document.getElementById('chat-widget');
+    const chatClose = document.getElementById('chat-close');
+    const chatSend = document.getElementById('chat-send');
+    const chatInput = document.getElementById('chat-input');
+    const chatBody = document.getElementById('chat-body');
 
-    // Chatbot Interaction
-    const sendBtn = document.getElementById('sendBtn');
-    const chatBody = document.getElementById('chatBody');
-    const userInput = document.getElementById('userInput');
+    const botReply = (text) => {
+      const div = document.createElement('div');
+      div.className = 'msg bot';
+      div.innerHTML = text;
+      chatBody.appendChild(div);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    };
 
-    sendBtn.addEventListener('click', () => {
-      let msg = userInput.value.trim();
-      if(msg){
-        // User message
-        let userMsg = document.createElement('div');
-        userMsg.classList.add('user-msg');
-        userMsg.textContent = msg;
-        chatBody.appendChild(userMsg);
+    const userReply = (text) => {
+      const div = document.createElement('div');
+      div.className = 'msg you';
+      div.textContent = text;
+      chatBody.appendChild(div);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    };
 
-        // Bot reply (simple demo)
-        let botMsg = document.createElement('div');
-        botMsg.classList.add('bot-msg');
-        if(msg.toLowerCase().includes("services")){
-          botMsg.textContent = "We offer Cloud, DevOps, and AI solutions 🚀⚙️🤖";
-        } else if(msg.toLowerCase().includes("hello") || msg.toLowerCase().includes("hi")){
-          botMsg.textContent = "Hi there! 👋 How are you doing today?";
-        } else {
-          botMsg.textContent = "Thanks for your message! Our team will get back to you.";
-        }
-        chatBody.appendChild(botMsg);
+    const cannedResponses = (msg) => {
+      const m = msg.toLowerCase();
+      if (m.includes('hello') || m.includes('hi')) return "Hi! 😊 How can I assist you?";
+      if (m.includes('service') || m.includes('cloud')) return "We offer Public, Hybrid, and Private Cloud solutions with DevOps and AI/ML integration.";
+      if (m.includes('price') || m.includes('cost')) return "Pricing depends on scope. Share details at <strong>sales@s3m.site</strong> and we'll respond quickly.";
+      if (m.includes('contact') || m.includes('email')) return "You can reach us at <strong>sales@s3m.site</strong> or call +91 7730842873.";
+      if (m.includes('support')) return "Our support number is +91 7730842873. We're here to help!";
+      return "Thanks for the message! We'll get back to you at <strong>sales@s3m.site</strong>.";
+    };
 
-        chatBody.scrollTop = chatBody.scrollHeight; // Auto-scroll
-        userInput.value = "";
+    chatToggle.addEventListener('click', () => {
+      chatWidget.classList.add('open');
+    });
+    chatClose.addEventListener('click', () => {
+      chatWidget.classList.remove('open');
+    });
+    chatSend.addEventListener('click', () => {
+      const val = chatInput.value.trim();
+      if (!val) return;
+      userReply(val);
+      botReply(cannedResponses(val));
+      chatInput.value = '';
+    });
+    chatInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        chatSend.click();
       }
     });
   </script>
 </body>
 </html>
-        
