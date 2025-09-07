@@ -44,12 +44,18 @@ body{
   background:#fff;
   box-shadow: var(--shadow);
 }
-.logo{font-size:1.6rem; font-weight:700; letter-spacing:.3px}
-.logo-s{color:var(--green)}
-.logo-3{color:var(--yellow)}
-.logo-m{color:var(--red)}
-.logo-dot{color:#fff; background:#000; padding:.1rem .35rem; border-radius:999px; margin:0 .15rem}
-.logo-site{color:var(--site)}
+/* ✅ Fixed Logo Colors */
+.logo-s { color: red; }       /* S in red */
+.logo-3 { color: gold; }      /* 3 in yellow */
+.logo-m { color: blue; }      /* M in blue */
+.logo-dot { 
+  color:#fff; 
+  background:#000; 
+  padding:.1rem .35rem; 
+  border-radius:999px; 
+  margin:0 .15rem;
+}
+.logo-site { color: var(--site); }
 
 .navbar nav{}
 .nav-links{ list-style:none; display:flex; gap:1rem; margin:0; padding:0; align-items:center;}
